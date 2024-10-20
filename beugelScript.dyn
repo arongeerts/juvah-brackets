@@ -65,46 +65,6 @@
       "Description": "Get all elements of the specified category from the model."
     },
     {
-      "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
-      "Engine": "CPython3",
-      "VariableInputPorts": true,
-      "Id": "8f883fc107614293a0756ee25024f346",
-      "NodeType": "ExtensionNode",
-      "Inputs": [
-        {
-          "Id": "a23fb39623c447198297776e86ddaf88",
-          "Name": "script",
-          "Description": "Python script to run.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        },
-        {
-          "Id": "5e177c8d781546839675386fd802bf03",
-          "Name": "IN[0]",
-          "Description": "Input #0",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "74d2fa217e1445b5a3427c113cc84bf2",
-          "Name": "OUT",
-          "Description": "Result of the python script",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Runs a Python script from a string."
-    },
-    {
       "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
       "Id": "7ddaff8fa5234a598805373ccb935e3e",
       "NodeType": "ExtensionNode",
@@ -122,7 +82,7 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows you to select a file on the system and returns its file path",
-      "HintPath": "C:\\Mac\\Home\\Documents\\agits\\juvah\\juvah.py",
+      "HintPath": "C:\\Mac\\Home\\Documents\\git\\juvah-brackets\\juvah.py",
       "InputValue": ".\\juvah.py"
     },
     {
@@ -1330,36 +1290,6 @@
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "Id": "d7faefe35d104afbb2e3278554251779",
-      "NodeType": "FunctionNode",
-      "Inputs": [
-        {
-          "Id": "ac128601c98c47a991ec695d9255f173",
-          "Name": "file",
-          "Description": "File object to read text from\n\nvar",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "5dfc1c33409d4b7da1cd137c81aeef19",
-          "Name": "string",
-          "Description": "Contents of the text file.",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
-      "Replication": "Auto",
-      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "Id": "9c90238c7c864641a8ae265f6caba39b",
       "NodeType": "FunctionNode",
       "Inputs": [
@@ -1464,6 +1394,135 @@
       "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
       "Replication": "Auto",
       "Description": "Set one of the element's parameters.\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 189,
+      "SelectedString": "OST_DuctFitting",
+      "Id": "43c683c0bbc64722ae90a9707162ed55",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6895234d2e374613993b1d8ea09a2207",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "40644a072c5945dabbb9efd92cda8a8d",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "0d72e52fcf0b499eaee245996fb878bd",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b65a8907d3ff47a8b044095f5271c4dc",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonStringNode, PythonNodeModels",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "51d42a9938a34a2b86cf378142561f43",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "b3a116b8909b4401a8129df97d919d7a",
+          "Name": "script",
+          "Description": "Python script to run.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "64141b62a22d42418975bdf7a4ee9e70",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd21a9e5613b47b5a85f83304a0a68b2",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f0872dc9423f44b2927191f5feaaf26e",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs a Python script from a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "c9f69ae1045844769dadd5f605cbb77b",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "05e730b233db4ee38678c4ee5291a95f",
+          "Name": "file",
+          "Description": "File object to read text from\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0889e305942c48c899b8d8c268dfba35",
+          "Name": "string",
+          "Description": "Contents of the text file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
+      "Replication": "Auto",
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
     }
   ],
   "Connectors": [
@@ -1475,26 +1534,14 @@
     },
     {
       "Start": "b520b6e6cadd4308aed1f87e0176acf2",
-      "End": "50e4685f23fe4ac9a39fa3345aec2ee8",
-      "Id": "ee9dc5bdd2144b2688eb823d983fae4d",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "74d2fa217e1445b5a3427c113cc84bf2",
-      "End": "f0e8b9bd97f5448294f8c32a65cb6305",
-      "Id": "f72864eb146c457fae22573feed6c225",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "74d2fa217e1445b5a3427c113cc84bf2",
-      "End": "ff3857d775ab403096f17c2e501d841a",
-      "Id": "576df3fdcd744bc1b5f1a4ed5e5dfe2b",
+      "End": "64141b62a22d42418975bdf7a4ee9e70",
+      "Id": "78525d4ccd9148e3a96d786be25227e5",
       "IsHidden": "False"
     },
     {
       "Start": "0175456abc5e40a0983e2d3bed8c5e07",
-      "End": "ac128601c98c47a991ec695d9255f173",
-      "Id": "81761ddcdb2a43a2ae99d0dc94c85115",
+      "End": "05e730b233db4ee38678c4ee5291a95f",
+      "Id": "6b1e7c1776864bf19cb7c0c98e3bb9ac",
       "IsHidden": "False"
     },
     {
@@ -1655,8 +1702,8 @@
     },
     {
       "Start": "6d92765e11b34da5b3761f04b37b5158",
-      "End": "5e177c8d781546839675386fd802bf03",
-      "Id": "d0b9b65278e74519866f8edba5d80770",
+      "End": "dd21a9e5613b47b5a85f83304a0a68b2",
+      "Id": "ee27101feb5543e5ab9ca6fbe92a0a79",
       "IsHidden": "False"
     },
     {
@@ -1780,12 +1827,6 @@
       "IsHidden": "False"
     },
     {
-      "Start": "5dfc1c33409d4b7da1cd137c81aeef19",
-      "End": "a23fb39623c447198297776e86ddaf88",
-      "Id": "cdce1db94e6d462f84a85d2e73988521",
-      "IsHidden": "False"
-    },
-    {
       "Start": "45424c5ae7644fa1bcfdf048037f95c0",
       "End": "854df70da3b94aa2b0056b544f548d94",
       "Id": "c5e1a51317b94093921f44b7322502e3",
@@ -1795,6 +1836,36 @@
       "Start": "a4ec0f05610f4428afc1574cd325c2db",
       "End": "b0e9d4bcceac446e8f42509e146f4146",
       "Id": "54f316e63a0841a8ab848726b73d6020",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6895234d2e374613993b1d8ea09a2207",
+      "End": "0d72e52fcf0b499eaee245996fb878bd",
+      "Id": "9128fc1a14614ce7b43ea10c2e2c8e1d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b65a8907d3ff47a8b044095f5271c4dc",
+      "End": "50e4685f23fe4ac9a39fa3345aec2ee8",
+      "Id": "63698bde044448e88e59c590412091cb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f0872dc9423f44b2927191f5feaaf26e",
+      "End": "f0e8b9bd97f5448294f8c32a65cb6305",
+      "Id": "88f1981a958f4d6f873453953d5be7fb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f0872dc9423f44b2927191f5feaaf26e",
+      "End": "ff3857d775ab403096f17c2e501d841a",
+      "Id": "bcf6e06fbdf444dca574afee8a0be2da",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0889e305942c48c899b8d8c268dfba35",
+      "End": "b3a116b8909b4401a8129df97d919d7a",
+      "Id": "108ac75e79af467fb4093de21c356067",
       "IsHidden": "False"
     }
   ],
@@ -1836,13 +1907,13 @@
     {
       "NodeId": "5c54e81c-208e-4159-8540-42fb9dde3021",
       "Binding": {
-        "ByPoint_InClassDecl-1_InFunctionScope-1_Instance0_5c54e81c-208e-4159-8540-42fb9dde3021": "H4sIAAAAAAAACrXaPW8TQRSF4f+ydSzN551dahpqSkzhxF5EkwLSRfnvhGnnLc8RQiJIuVfjTc6za58f79vr4+/b4/719nbbvvxYvrzPf2zv1+3725/fr7++fb1uX65bOe+3+5nKpebeLm28tMvtfjsv7TlGekmtPB/5klJNqd9v1+3pun17fZvfW3MbpcTH9vHz48mx7hnWjc91T5LpLzB99x3mDusO37rHuq4m37oT1mXbukeCdUX1k/HIML36DlNgXZMdpsL07jtMg3W+iHh0WDd86wLW7bJLNWD6IZu+r9ObLxEeB6zLssOARK34DgMSNWMiAE1NlwggUeuy6QBPC9l0cKbJbglOYKX5bglOcKb5bglOcKYn2WsHznTZ7/sJrHQZ+Cco0qtsOqDRm+8ygyLdB/4JrHQf+Cew0n3gn+BMNyYCONONiQDOhO+W4AR4wveQcIJE4btHOIGmUIVIJKApbCESCWgKW4hEAprCFiKRwKqwhUgkwCtsIRIJNAtbiEQC3oYtRCIBb0N1nxEJNBu2zIgEmg3bc0Uk0GyonisiAV7DmBmA1zBmBuA1jJkBeA1jZgBew5cZGTTbfZmRQbNdlhkZ8NpVzyaRwardFxEZrNplEZGBpt0XERlo2lXvRUQGiXZfImSgaVe99xgZJNqNAQASHar3IiKDRIftQSMySHToAgDgOYwBAPAcugAAZw5fABRw5pAFQAFWDl8AFHDm8N0SFIDn8CVCWeH5/G/ZpVrhqUl2B1BWZ2ryPTWUFZ6aZO80lNWZmmQBUFZnalJ9+BBlZaUm3zNBWZ2pyRgAqzM1GQNghacmYwCs8NTseyYoq0Q1yxKhrvDU7EuEukpUs+8eoa4Sff6VvXYrPJ/fJJsOzmRfRFSAJ6s+sIwK8GTZM0EFZ7KqjxAVnCky8Cs4U3S/3uBMkd3xV2ClyHyvoEjxfZJQQZHiu+OvoIivohgVFJkVRc+6Bqz4OovRgBVfZzEasDI7i5Kf+waszIqiZjqwMhuJppcKWPFVFKOBM7OiaFoH8MzOouZSATyzoqiZDvD4GonRQKLZSDStA5pmRdG0DqyanUXNpQKaZkXRdBigaXYWNYcBiXwVxeggkayiGB3gmRVF02EAntlZNK0DiWQlxuggka/EGB0kmiVGzWEAHllnMTo4I+ssRgdnZmfRdCEAHlmJMTo4M0uMmunAyuwsaqaDIrOiqJkOisxGomY6oDELiJrpgMbsG0qmBxgx64Wa6WCEr00YAUbMNqHmMECCrjwYQIKxPBhAwiwPag4DJMyuoGY6kGCsBgYYMauBmsMACcYmYIARswmoOQwYMYt/psMAGrMJqDkMoGEs/gUooiv+BSgyi3+S6QMUMfb8BrBi7PkNYGX2/DSvHbBirPUNcMZY6xvgzKz1mdYBPLqe3wB4jD2/AfDMnt/P/3/+AexO3sBMQAAA"
+        "ByPoint_InClassDecl-1_InFunctionScope-1_Instance0_5c54e81c-208e-4159-8540-42fb9dde3021": "H4sIAAAAAAAACrXaPW8bSRCE4f+ysQjs7vR8OXbi+ELTwS5JHy5RcKfM0H+3r9N9wyo4sQG5G0NK9cxS9f3X8v767+P1/Hp8HMuX75d/PvMvy6/78tfHv/+8//3t6335cl+er/56btu8zce632Itz9u5HT9vz3i+Htt4jb6/buta1rXt9b683Zdv7x/5f8sWvazb5/L54/PNsa7Buv3PujfJ9A7Ti+8wA9aFb92EddW37oB1zbfuhHVd9p3xgOnDd5gnrJuyw7yu07fVd5ifsM4XEWWFdbtv3QbriuqtKjtMD9n0AtN9iVAC1jXZYUCirfsOAxJtvkQoQNMmS4QCEu2rbDrAs2+y6eDMLrsSFGBl910JCjiz+64EBZzZq+y1A2d23c87sLLLwA9QZB+y6YDGPm1vc4AixQd+ACvFB34AK8UHfoAzxZcIAc4UXyIEOFN8V4IAeIrvISFAouK7IwTQVHQhAjQVY4gATWEMEaApjCECVoUxRACv8IVIBc3CFyIVeAtfiFTgLWT3jAqahS8zKmgWvueKCpqF7LmiAl7VlxkV8Kq+zKiAV/VlRgW8qjEzAK9qzAzQrBozAzSruswAvKrs2aSCVdUYEWBVlUVEA5qaLyIa0NRkn0U0kKj5EqEBTU322WMDiZovABpI1GSfRTSQqPkeNBpI1GQB0ACe5guABvA0XQCAM90YAOBM1wUAsNKNAQDOdN+VoAE83ZgIAE+XJUIHeLrsBtDBme57augAT5d90tDBmS4LgA7ODNkvHzqwMnzPBB2cGb4A6ODM8AVAB3iGLwA6wDN8zwQdJBq6RAB4hjERQKLhuyN0kGjoIgLgmbqIAGemLyIGwDNlv7AcAM+UPRMMcGbK+ggDnJky8Ac4M2U/3gOcmbIb/wBWpsz3AYpM328SxlWRWH03/nFVJIwVxXFVJLKiaFp3ZeXP1/vWXVkJY2dxXFmJ7Cxqvu+vrERWFDXTr6xENhI9L9W8shLGiuK8OhNZUTStu8IT2VmUvFXzCk9kRVEz/QpPGBuJ8ypRZCPRtO5KU2RF0bTualVkZ1HzVgFNWVE0HQZoys6i5jAgkbGiOEEiXUVxAjxZUTQdBuDJzqJpHUikKzFOkMhYYjxAoiwxSg5zADy6zuIBzug6iwc4k51F0xsB8OhKjAc4kyVGzXRgJTuLmumgSFYUNdNBkWwkaqYDGllA1EwHNLJvqJkORmS9UDMdjDC2CQ8wItuEmsMACbry4AEkGMuDJ5CQ5UHJYU4gIbuCmulAgrEaeIIRWQ3UHAZIMDYBTzAim4Caw4ARWfwzHQbQyCag5jCAhrH4d4IiuuLfCYpk8U8zHRQx9vxOYMXY8zuBlez5aV47YMVY6zvBGWOt7wHOZK3PtA7g0fX8HgCPsef3AHiy5/fj/z+/AX7CXSxMQAAA"
       }
     },
     {
       "NodeId": "b458b136-2ad8-4431-a25b-8deb8b6237b7",
       "Binding": {
-        "ByPoint_InClassDecl-1_InFunctionScope-1_Instance0_b458b136-2ad8-4431-a25b-8deb8b6237b7": "H4sIAAAAAAAACrXYvW4jMQwE4HdR7QUokfuj1GlSp8y6oLz24RoXibvA755DruSUw84uTEILDz9qP77L/fr1uB6v/vDy8hG+Hr8fyvde3h+ff+9/3l738rKXdjv8uEmbtM422XqxyQ+/TTaWVS5ibfQ6iajIsva9nPbydn/8/larrbrNz/I8P08Z7Ry0W/LaDdBuzWt3Ae22f+1OlOoHqN7zDnON7brQDnMD1Sur+iageqNVr6C60qo3UN1o1RVUz8v7ZqDdQjvMDKqvtOoLqE5L87aC6p1WfQvVTWjh3SIaJjXvTxTRMOGlORphonmHiUaYWF67iIbJTHt20QgTXryjESa0ePdohAkt3j0aYZKHdY9oWKXlvUc0rNKw7tEIqy3vUUU0rNL07hENq3nx7lERq7R4d6BIzdvWO2Cl8vIOFKlb3mEAKzVxAABWmuS1A6y0vA2gA2da4ogA8LS8lcCBRC1vZjigqeVdARzQ1PKGiAOrWt6V3wFeLW+qOMCr0W4NDvBS2hbhwCqlbREOrFLaJcEBTZo4EYBVmjgRgFVK2yIc0KSJAwDQpLQtwoFEmph3IJHS8j4APJa3NAwAj9EGwADOWN6OMIAzRrtGDMCK5Q2AAVgx2gAYgBWjvSUYgBWj5X0AVoz2lmAAVowXb6DInBhvoMjMizdQZE6MN1Bk/g/++Xn+AQetjkyZGwAA"
+        "ByPoint_InClassDecl-1_InFunctionScope-1_Instance0_b458b136-2ad8-4431-a25b-8deb8b6237b7": "H4sIAAAAAAAACrXYsW7rMAwF0H/RHAOkbFpS5y6d31hnSCOy6JKhzVbk31/RjrwjuSVDLiEj5KH8+l1u+nXX+Xy5X8rTq/s6fz+U76P8u39+3N5fno/ydJSpTSfzWMaV6rLROpc3vtgyt6lX7tpb1YVoJdqv21FOR3m53X9/u/LWtp0e5XF+nDLKCSjHeeV2UK7mlWug3PpT7hSS3kH6lneYAcpJ2GEuIH0PS38D6S0s/QrSe1j6BOkjLF19ekvsdwPlOOowk0B6DUtnkB7WzbOC9C0sfQXpYc07ARptT/sTTYBGC+vmCYxoPe8wwIg28soBNDqFPTtgRI9rb2BEj2tvYESPa29gRM/DegI0ely/AzR6GNYTGNFb2qNSgEbP63cFivQwzhUoMvI4V8DKCOt3BayMvG1dAStjzSsHnBl5E0GBM0PyygFnRt5KoACekTgzgEQjcWYAmkbejqDeKqHEIeKtEsp7B6AeL6HEqeI1EwpbK8zjJRR2azBvlVDYFmHeKqGwLcI8TUJ5E8G8VUJ5E8G8VUJ5E8G8VcJhtwbzNAnnDQDzNAmHXSPMSySct0WYl0g4b4swL5Fw3EQA8HDe0mAAHg57j2DAGQ57K2iAFY66RjQCrNSofm8EWKlRt4ZGgJWa5nsj4EyN8r0RYKWmtXcjwEr9uyScH+f/EwOj2X8aAAA="
       }
     }
   ],
@@ -1876,8 +1947,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": -55.82227997759469,
-        "Y": 127.70035340033346
+        "X": -68.20369951606892,
+        "Y": 52.82224476289474
       },
       {
         "Id": "633b4cb4f626468495fe46d1a620722a",
@@ -1886,18 +1957,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 279.6777200224053,
-        "Y": 127.70035340033346
-      },
-      {
-        "Id": "8f883fc107614293a0756ee25024f346",
-        "Name": "Python Script From String",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 1236.4665776432298,
-        "Y": 169.3367257514471
+        "X": 268.4754832971191,
+        "Y": 52.23265335630077
       },
       {
         "Id": "7ddaff8fa5234a598805373ccb935e3e",
@@ -1906,8 +1967,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 584.4665776432298,
-        "Y": 112.33672575144715
+        "X": 594.4896315553278,
+        "Y": 21.539649135970336
       },
       {
         "Id": "5c54e81c208e4159854042fb9dde3021",
@@ -2116,8 +2177,8 @@
         "IsSetAsOutput": false,
         "Excluded": false,
         "ShowGeometry": true,
-        "X": 821.9665776432298,
-        "Y": 260.16422575144713
+        "X": 782.4639534014316,
+        "Y": 309.10031249874953
       },
       {
         "Id": "cb59ab9df1bd4864ad683b0dd9d112c8",
@@ -2260,16 +2321,6 @@
         "Y": 834.3742268570356
       },
       {
-        "Id": "d7faefe35d104afbb2e3278554251779",
-        "Name": "FileSystem.ReadText",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "ShowGeometry": true,
-        "X": 821.9665776432298,
-        "Y": 112.33672575144715
-      },
-      {
         "Id": "9c90238c7c864641a8ae265f6caba39b",
         "Name": "Width",
         "IsSetAsInput": false,
@@ -2298,6 +2349,46 @@
         "ShowGeometry": true,
         "X": 3486.7420214002686,
         "Y": 968.3742268570356
+      },
+      {
+        "Id": "43c683c0bbc64722ae90a9707162ed55",
+        "Name": "Select Duct Fittings Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -66.81759575808519,
+        "Y": 184.25502060916173
+      },
+      {
+        "Id": "40644a072c5945dabbb9efd92cda8a8d",
+        "Name": "Get all Duct fittings",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 259.0058456705251,
+        "Y": 184.20891278496558
+      },
+      {
+        "Id": "51d42a9938a34a2b86cf378142561f43",
+        "Name": "Python Script From String",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1232.4823261968013,
+        "Y": 86.26238112863089
+      },
+      {
+        "Id": "c9f69ae1045844769dadd5f605cbb77b",
+        "Name": "FileSystem.ReadText",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 877.0939490727261,
+        "Y": 23.659194888691815
       }
     ],
     "Annotations": [
@@ -2310,17 +2401,19 @@
         "HeightAdjustment": 0.0,
         "Nodes": [
           "633b4cb4f626468495fe46d1a620722a",
-          "cd7ccde4c1484693839e6e22c34234f1"
+          "cd7ccde4c1484693839e6e22c34234f1",
+          "43c683c0bbc64722ae90a9707162ed55",
+          "40644a072c5945dabbb9efd92cda8a8d"
         ],
         "HasNestedGroups": false,
-        "Left": -65.82227997759469,
-        "Top": 54.700353400333455,
-        "Width": 523.0,
-        "Height": 205.0,
+        "Left": -78.20369951606892,
+        "Top": -20.767346643699227,
+        "Width": 565.709545186594,
+        "Height": 337.022367252861,
         "FontSize": 36.0,
         "GroupStyleId": "4d68be4a-a04d-4945-9dd5-cdf61079d790",
-        "InitialTop": 127.70035340033346,
-        "InitialHeight": 145.0,
+        "InitialTop": 52.23265335630077,
+        "InitialHeight": 277.022367252861,
         "TextblockHeight": 63.0,
         "Background": "#FFB9F9E1"
       },
@@ -2419,7 +2512,7 @@
         "FontSize": 36.0,
         "GroupStyleId": "4d68be4a-a04d-4945-9dd5-cdf61079d790",
         "InitialTop": 705.3742268570356,
-        "InitialHeight": 510.5,
+        "InitialHeight": 600.0000000000002,
         "TextblockHeight": 63.0,
         "Background": "#FFFFB8D8"
       },
@@ -2431,27 +2524,27 @@
         "WidthAdjustment": 0.0,
         "HeightAdjustment": 0.0,
         "Nodes": [
-          "8f883fc107614293a0756ee25024f346",
           "2891400c8f4d494f9562ce46694e9378",
           "78845afed8a64a9c85dbd68dbbec4a7f",
-          "d7faefe35d104afbb2e3278554251779",
-          "7ddaff8fa5234a598805373ccb935e3e"
+          "7ddaff8fa5234a598805373ccb935e3e",
+          "51d42a9938a34a2b86cf378142561f43",
+          "c9f69ae1045844769dadd5f605cbb77b"
         ],
         "HasNestedGroups": false,
-        "Left": 574.4665776432298,
-        "Top": 39.33672575144715,
-        "Width": 939.0,
-        "Height": 457.37424109222593,
+        "Left": 584.4896315553278,
+        "Top": -51.460350864029664,
+        "Width": 924.9926946414735,
+        "Height": 548.1713177077028,
         "FontSize": 36.0,
         "GroupStyleId": "00000000-0000-0000-0000-000000000000",
-        "InitialTop": 112.33672575144715,
-        "InitialHeight": 387.87424109222593,
+        "InitialTop": 21.539649135970336,
+        "InitialHeight": 478.67131770770277,
         "TextblockHeight": 63.0,
         "Background": "#FFFFAA45"
       }
     ],
-    "X": -1328.301144489158,
-    "Y": -405.8674348643257,
-    "Zoom": 0.6352716534172568
+    "X": -28.983564308459904,
+    "Y": 111.28010923006576,
+    "Zoom": 0.5315690845382114
   }
 }
